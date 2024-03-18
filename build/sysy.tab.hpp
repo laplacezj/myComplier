@@ -46,11 +46,18 @@ extern int yydebug;
 /* "%code requires" blocks.  */
 #line 1 "/root/compiler/sysy-complier/src/sysy.y"
 
+<<<<<<< HEAD
     #include <memory>
     #include <string>
     #include "ast.hpp"
 
 #line 54 "/root/compiler/sysy-complier/build/sysy.tab.hpp"
+=======
+  #include <memory>
+  #include <string>
+
+#line 53 "/root/compiler/sysy-complier/build/sysy.tab.hpp"
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -68,6 +75,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
+<<<<<<< HEAD
 #line 26 "/root/compiler/sysy-complier/src/sysy.y"
 
     std::string *str_val;
@@ -75,6 +83,14 @@ union YYSTYPE
     BaseAST *ast_val;
 
 #line 78 "/root/compiler/sysy-complier/build/sysy.tab.hpp"
+=======
+#line 30 "/root/compiler/sysy-complier/src/sysy.y"
+
+  std::string *str_val;
+  int int_val;
+
+#line 76 "/root/compiler/sysy-complier/build/sysy.tab.hpp"
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -85,6 +101,10 @@ typedef union YYSTYPE YYSTYPE;
 
 extern YYSTYPE yylval;
 
+<<<<<<< HEAD
 int yyparse (std::unique_ptr<BaseAST> &ast);
+=======
+int yyparse (std::unique_ptr<std::string> &ast);
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
 #endif /* !YY_YY_ROOT_COMPILER_SYSY_COMPLIER_BUILD_SYSY_TAB_HPP_INCLUDED  */

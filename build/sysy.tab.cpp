@@ -66,12 +66,17 @@
 
 
 /* First part of user prologue.  */
+<<<<<<< HEAD
 #line 7 "/root/compiler/sysy-complier/src/sysy.y"
+=======
+#line 6 "/root/compiler/sysy-complier/src/sysy.y"
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
 
 #include <iostream>
 #include <memory>
 #include <string>
+<<<<<<< HEAD
 #include "ast.hpp"
 
 // 声明 lexer 函数和错误处理函数
@@ -80,6 +85,17 @@ void yyerror(std::unique_ptr<BaseAST> &ast, const char *s);
 
 
 #line 83 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+=======
+
+// 声明 lexer 函数和错误处理函数
+int yylex();
+void yyerror(std::unique_ptr<std::string> &ast, const char *s);
+
+using namespace std;
+
+
+#line 84 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -124,9 +140,14 @@ extern int yydebug;
 /* "%code requires" blocks.  */
 #line 1 "/root/compiler/sysy-complier/src/sysy.y"
 
+<<<<<<< HEAD
     #include <memory>
     #include <string>
     #include "ast.hpp"
+=======
+  #include <memory>
+  #include <string>
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
 #line 132 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
 
@@ -146,6 +167,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
+<<<<<<< HEAD
 #line 26 "/root/compiler/sysy-complier/src/sysy.y"
 
     std::string *str_val;
@@ -153,6 +175,14 @@ union YYSTYPE
     BaseAST *ast_val;
 
 #line 156 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+=======
+#line 30 "/root/compiler/sysy-complier/src/sysy.y"
+
+  std::string *str_val;
+  int int_val;
+
+#line 155 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -163,7 +193,11 @@ typedef union YYSTYPE YYSTYPE;
 
 extern YYSTYPE yylval;
 
+<<<<<<< HEAD
 int yyparse (std::unique_ptr<BaseAST> &ast);
+=======
+int yyparse (std::unique_ptr<std::string> &ast);
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
 #endif /* !YY_YY_ROOT_COMPILER_SYSY_COMPLIER_BUILD_SYSY_TAB_HPP_INCLUDED  */
 
@@ -528,7 +562,11 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
+<<<<<<< HEAD
        0,    46,    46,    55,    65,    71,    78,    85
+=======
+       0,    52,    52,    68,    78,    84,    91,    98
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 };
 #endif
 
@@ -700,7 +738,11 @@ do {                                                                      \
 `-----------------------------------*/
 
 static void
+<<<<<<< HEAD
 yy_symbol_value_print (FILE *yyo, int yytype, YYSTYPE const * const yyvaluep, std::unique_ptr<BaseAST> &ast)
+=======
+yy_symbol_value_print (FILE *yyo, int yytype, YYSTYPE const * const yyvaluep, std::unique_ptr<std::string> &ast)
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 {
   FILE *yyoutput = yyo;
   YYUSE (yyoutput);
@@ -722,7 +764,11 @@ yy_symbol_value_print (FILE *yyo, int yytype, YYSTYPE const * const yyvaluep, st
 `---------------------------*/
 
 static void
+<<<<<<< HEAD
 yy_symbol_print (FILE *yyo, int yytype, YYSTYPE const * const yyvaluep, std::unique_ptr<BaseAST> &ast)
+=======
+yy_symbol_print (FILE *yyo, int yytype, YYSTYPE const * const yyvaluep, std::unique_ptr<std::string> &ast)
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 {
   YYFPRINTF (yyo, "%s %s (",
              yytype < YYNTOKENS ? "token" : "nterm", yytname[yytype]);
@@ -760,7 +806,11 @@ do {                                                            \
 `------------------------------------------------*/
 
 static void
+<<<<<<< HEAD
 yy_reduce_print (yy_state_t *yyssp, YYSTYPE *yyvsp, int yyrule, std::unique_ptr<BaseAST> &ast)
+=======
+yy_reduce_print (yy_state_t *yyssp, YYSTYPE *yyvsp, int yyrule, std::unique_ptr<std::string> &ast)
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 {
   int yylno = yyrline[yyrule];
   int yynrhs = yyr2[yyrule];
@@ -1050,7 +1100,11 @@ yysyntax_error (YYPTRDIFF_T *yymsg_alloc, char **yymsg,
 `-----------------------------------------------*/
 
 static void
+<<<<<<< HEAD
 yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep, std::unique_ptr<BaseAST> &ast)
+=======
+yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep, std::unique_ptr<std::string> &ast)
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 {
   YYUSE (yyvaluep);
   YYUSE (ast);
@@ -1080,7 +1134,11 @@ int yynerrs;
 `----------*/
 
 int
+<<<<<<< HEAD
 yyparse (std::unique_ptr<BaseAST> &ast)
+=======
+yyparse (std::unique_ptr<std::string> &ast)
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 {
     yy_state_fast_t yystate;
     /* Number of tokens to shift before error messages enabled.  */
@@ -1322,6 +1380,7 @@ yyreduce:
   switch (yyn)
     {
   case 2:
+<<<<<<< HEAD
 #line 46 "/root/compiler/sysy-complier/src/sysy.y"
               {
         auto func = std::unique_ptr<BaseAST>((yyvsp[0].ast_val));
@@ -1377,6 +1436,62 @@ yyreduce:
 
 
 #line 1380 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+=======
+#line 52 "/root/compiler/sysy-complier/src/sysy.y"
+            {
+    ast = unique_ptr<string>((yyvsp[0].str_val));
+  }
+#line 1329 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+    break;
+
+  case 3:
+#line 68 "/root/compiler/sysy-complier/src/sysy.y"
+                                 {
+    auto type = unique_ptr<string>((yyvsp[-4].str_val));
+    auto ident = unique_ptr<string>((yyvsp[-3].str_val));
+    auto block = unique_ptr<string>((yyvsp[0].str_val));
+    (yyval.str_val) = new string(*type + " " + *ident + "() " + *block);
+  }
+#line 1340 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+    break;
+
+  case 4:
+#line 78 "/root/compiler/sysy-complier/src/sysy.y"
+        {
+    (yyval.str_val) = new string("int");
+  }
+#line 1348 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+    break;
+
+  case 5:
+#line 84 "/root/compiler/sysy-complier/src/sysy.y"
+                 {
+    auto stmt = unique_ptr<string>((yyvsp[-1].str_val));
+    (yyval.str_val) = new string("{ " + *stmt + " }");
+  }
+#line 1357 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+    break;
+
+  case 6:
+#line 91 "/root/compiler/sysy-complier/src/sysy.y"
+                      {
+    auto number = unique_ptr<string>((yyvsp[-1].str_val));
+    (yyval.str_val) = new string("return " + *number + ";");
+  }
+#line 1366 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+    break;
+
+  case 7:
+#line 98 "/root/compiler/sysy-complier/src/sysy.y"
+              {
+    (yyval.str_val) = new string(to_string((yyvsp[0].int_val)));
+  }
+#line 1374 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+    break;
+
+
+#line 1378 "/root/compiler/sysy-complier/build/sysy.tab.cpp"
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
       default: break;
     }
@@ -1608,11 +1723,20 @@ yyreturn:
 #endif
   return yyresult;
 }
+<<<<<<< HEAD
 #line 90 "/root/compiler/sysy-complier/src/sysy.y"
+=======
+#line 103 "/root/compiler/sysy-complier/src/sysy.y"
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 
 
 // 定义错误处理函数, 其中第二个参数是错误信息
 // parser 如果发生错误 (例如输入的程序出现了语法错误), 就会调用这个函数
+<<<<<<< HEAD
 void yyerror(std::unique_ptr<BaseAST> &ast, const char *s) {
     std::cerr << "error: " << s << std::endl;
+=======
+void yyerror(unique_ptr<string> &ast, const char *s) {
+  cerr << "error: " << s << endl;
+>>>>>>> 6aff48aef7fd210dba6e7aed6c182d600662f6da
 }
